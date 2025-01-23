@@ -1,0 +1,7 @@
+CISC 3300 F24 
+In class assignment 3 
+1. Elements with ___semantic____ meaning are intended to convey meaning by their element type, even if the element is indistinguishable from other elements visually. 
+2. ____Block__ level elements always starts on a new line 
+3. __<a>_Anchor____ defines a hyperlink, which is used to link from one page to another. 4. Image files can be accessed ____relative___ to the HTML file. 
+5. The ___compression___ algorithm for a PNG file is lossless. 
+6. The __<form>____ element gives you a set of input elements to collect data from your users. 
