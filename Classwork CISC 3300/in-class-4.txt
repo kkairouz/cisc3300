@@ -1,0 +1,15 @@
+CISC 3300 F24
+In class assignment 3
+
+1. The HTML __id___ attribute is used to specify a unique __id___ for an HTML element
+2. The HTML ___div___ tag is a block-level element used for grouping and structuring content.
+3. CSS __rules____ have a property and a value and apply a visual effect.
+4. CSS _selectors____ are used to "find" (or select) the HTML elements you want to style
+5. If there are two or more CSS rules that point to the same element, the selector with the
+highest ___specificity____ will "win".
+6. HTML treats every element as living in its own _box_____.
+7. The ___padding____ property allows you to specify how much space should appear between the
+content of an element and its border
+8. ___text-allign___ is useful for centering inline block elements
+9. Setting a CSS rule of display: __block___ will cause it to start on a new line, and takes up the
+whole width
