@@ -1,0 +1,25 @@
+1. What is HTML? What does it do?
+
+HTML (HyperText Markup Language) is the standard language used to create and structure web pages. It provides the basic framework of a webpage using elements such as headings, paragraphs, images, links, and forms. HTML defines the content and structure of a webpage but does not handle styling (CSS) or functionality (JavaScript).
+
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user.
+
+The Fordham University website is structured with a clear and organized layout. The homepage prominently features a navigation bar at the top, allowing users to access different sections such as Academics, Admissions, and Student Life. The use of headings, subheadings, and categorized links helps guide users to relevant information efficiently. Visual hierarchy, such as bold headings and images, emphasizes key content, making the site user-friendly and accessible.
+
+3. What is an HTML element? Tag? Attribute?
+
+An HTML element consists of a start tag, content, and an end tag. Example: <p>This is a paragraph.</p>.
+
+A tag is the markup used to define an element, enclosed in angle brackets. Example: <h1>, <p>, <img>.
+
+An attribute provides additional information about an element and is included within the opening tag. Example: <img src="image.jpg" alt="An image">, where src and alt are attributes.
+
+4. What does it mean when an element has semantic meaning? And structural meaning?
+
+Semantic meaning refers to elements that convey the meaning of their content. For example, <header>, <article>, and <footer> describe their purpose in a webpage.
+
+Structural meaning refers to how elements organize and format content on a webpage. Elements like <div>, <section>, and <aside> help in structuring the layout without necessarily adding meaning.
+
+5. What is the default behavior when submitting an HTML form?
+
+By default, when an HTML form is submitted, the browser sends the form data to the URL specified in the action attribute of the <form> element using the method defined in the method attribute. If no method is specified, it defaults to GET, appending the form data to the URL as query parameters. If POST is used, the data is sent in the request body.
