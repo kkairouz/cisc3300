@@ -1,0 +1,9 @@
+1Hex Values Represent values for red green blue hexidecminal code 
+
+2 Typography can be defined as “the art and technique of arranging type in order to make language"visible ". 
+
+3Font face rule sets a new font to use that is made via font family 
+
+4List style shorthand properly allows you to set all the list style properties at once 
+
+5The object fit CSS property sets how the content of a replaced element, as an <img> or video should be realzied to fit the container
