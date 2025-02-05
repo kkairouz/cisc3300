@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Boxes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Horizontally center the container */
+            align-items: center; /* Vertically center the container */
+            min-height: 100vh; /* Ensure the body takes up full viewport height */
+            margin: 0; /* Remove default body margins */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: center; /* Center boxes horizontally within the container */
+            gap: 20px; /* Add some space between the boxes */
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: blue; /* Example color */
+            border: 1px solid blue; /* Example border */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
