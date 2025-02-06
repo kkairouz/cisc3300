@@ -1,0 +1,5 @@
+CISC 3300 S25 
+In class assignment 6 
+1. _CSS framework______ is a collection of CSS stylesheets that are prepped and ready to use. 2. _Bootstrap componets_______ are pre-styled UI elements like buttons, forms, navbars, and more, built with HTML, CSS, and JavaScript. 
+3. __responsive design_____ creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it. 
+4. __meta tag_____ is needed to get media queries to work 

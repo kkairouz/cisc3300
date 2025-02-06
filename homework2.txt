@@ -1,0 +1,18 @@
+CISC 3300 SP25
+Homework 2
+1. What do the id and class attributes do? How are they alike and different?
+
+The id is specific to one element in the code and class attributes are applied to different elements. When you make a class you have attributes and methods. Attributes are more or less variables while methods are just functions inside of the class. The class can be reused however the ID cannot be reused. 
+
+2. What are the parts of a CSS rule?
+CSS has its selector and declaration. The selector is used to find or select the HTML elements you want. Declarations are inside curly brackets. They also have a property and a value and a visual effect
+
+3. Explain how CSS rules cascade. 
+The important keyword will trump anything. If there are two or more CSS rules that point to an element the selector with highest specificity will win/overrule
+4. Contrast display: block, inline, inline-block. 
+In line displays an element (<span>). Any height and width properties will have no effect
+Block displays an element (<p>). It starts on a new line and takes up width
+Inline block displays an element as an inline block container. The element itself is formatted as an inline element but you can apply height and width values 
+
+5. What are border, padding, and margin?
+Every box has a border. It separates one edge from another, padding allows you to give space and have a certain amount of space appear between content, margin controls the gap between boxes
