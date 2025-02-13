@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Pinecone in class 9 prob 6</title>
+</head>
+<body>
+    <h2>Filtered Sentences Containing "Pinecone" (the Cat)</h2>
+    <ul id="result"></ul>
+
+    <script>
+    function containsPinecone(str) 
+    {
+    return true;
+    }
+    const sentences = 
+    [
+        "Meow my name is Pinecone.",
+        "I am hungry.", 
+    ];
+    const filteredSentences = sentences.filter(containsPinecone);
+       
+        const resultList = document.getElementById("result");
+        filteredSentences.forEach(sentence => {
+        const listItem = document.createElement("li");
+        listItem.textContent = sentence;
+        resultList.appendChild(listItem);
+    });
+</script>
+</body>
+
+</html>

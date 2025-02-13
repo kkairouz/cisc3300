@@ -1,0 +1,7 @@
+1. _higher order functions______ are functions that return a function or take other functions as arguments.
+2. ______functional___ programming is a declarative programming paradigm style where one
+applies pure functions in sequence to solve complex problems
+3. we can access object properties in JS with dot notation_______ or _bracket notation_________
+4. Logical operators are processed left to right. They ___short circuit_____ as soon as they have a
+result
+5. ___declartive programming_____ write code that describes what you want, but not necessarily how to get it.
