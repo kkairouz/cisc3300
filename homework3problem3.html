@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Flex Container problem 3</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.item
+{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+
+
+}
+@media(min-width: 500px)
+{
+    .container
+    {
+        flex-direction: row;
+    }
+}
+@media(max-width: 499px)
+{ 
+    .container
+    {
+        flex-direction: column;
+    }
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class = "container">
+<div class = "item"></div>
+ <div class = "item"></div>
+<div class = "item"></div>
+ </div>
+</body>
+
+</html>

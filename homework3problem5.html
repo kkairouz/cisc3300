@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+
+<title>Fordham CS Department</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+ body 
+{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    display: flex;
+}
+.sidebar 
+{
+    width: 250px;
+    background: maroon;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.sidebar a 
+{
+    display: block;
+    color: white;
+    text-decoration: underline;
+    padding: 10px 0;
+}
+.sidebar a:hover 
+{
+    text-decoration: underline;
+}
+        
+        
+.main-content 
+{
+    flex: 1;
+    padding: 50px;
+}
+.main-content h1 
+{
+    color: maroon;
+    font-size: 5em;
+}
+.content-text 
+{
+    display: flex;
+    align-items: flex-start;
+}
+.content-text img 
+{
+    width: 220px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.footer 
+{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+}
+@media screen and (max-width: 768px) 
+{
+body 
+{
+flex-direction: column;
+}
+ .sidebar 
+ {
+    width: 100%;
+    height: auto;
+}
+content-text 
+{
+    flex-direction: column;
+    align-items: center;
+}
+.content-text img 
+{
+    margin-left: 0;
+    margin-top: 20px;
+}
+}
+</style>
+</head>
+<body>
+<div class="main-content"> 
+<h1>Computer Science</h1>
+<p><strong>Degree Options:</strong> Major, Minor</p>
+<p><strong>Location:</strong> Lincoln Center, Rose Hill</p>
+<p>Visit the <a href="#" style="color: #800000; text-decoration: underline;">Computer and Information Science Department</a></p>
+<div class="content-text">
+<p>
+    Wherever there's a computer, there's a skilled person developing, maintaining, hacking, advancing or simply using it. Be that person.<br><br>
+    It's difficult to imagine life without computers when they’re so central to our information-driven global society. But it’s not difficult to imagine 
+    the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.<br><br>
+    The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, 
+    and the development of an ability to analyze and solve problems in using the computer as a tool.
+</p>
+<img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg" alt="Computer Science">
+</div>
+</div>
+<div class="footer">
+ <p>&copy; 2025 Fordham University - Computer Science Department</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+CISC 3300 S25 
+Homework 3 
+1. Compare and contrast Flexbox and CSS grid, how are they alike and how are they different? 
+Both Flexbox and CSS grid are layout systems. However, the grid is 2-dimensional, while Flexbox is only 1-dimensional. Both Flexbox and CSS grid are utilized for alignment, distribution and do spacing for elements. If you are working on something that does not work for a 1D scheme, the CSS grid will be your friend and help you out.
+
+
+2. What’s responsive design in web development and how do we implement it? 
+
+Responsive design helps a website adapt to different screen sizes and devices (like 9:16 format for iPhone, etc). Because of responsive design, content can resize and adjust. To do this we use meta tags (viewport) and use media quireres, flexbox/css grid
