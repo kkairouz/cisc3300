@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> In class 10 using div element</title>
+</head>
+<style>
+div{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px; 
+    color: aqua;
+}
+</style>
+<body>
+<div id = "the div"> inital text </div>
+<script>
+   document.getElementById("the div").addEventListener("click", function() {
+            this.textContent = "added text!"; 
+            this.style.backgroundColor = "yellow"; 
+        });
+</script>
+
+</body>
+</html>
