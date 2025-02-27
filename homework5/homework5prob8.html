@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> homework 6 problem 8</title>
+</head>
+<style>
+li
+{
+   font-family: 'Times New Roman', Times, serif;
+   color: black; 
+}
+</style>
+<body>
+<ul id = "ingredients">
+<li> 2 sticks of butter </li>
+<li> 2 cups of sugar</li>
+<li> half a cup of coccoa powder</li>
+<li> a teaspoon of salt</li>
+</ul>
+<script>
+    const listItems = document.querySelectorAll("#ingredients li");
+
+    listItems.forEach(item => 
+    {
+        item.addEventListener("click", () => 
+        {
+            item.style.color = getRandomColor(); 
+        });
+    });
+
+    function getRandomColor() 
+    {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
+</body>
+</html>
+

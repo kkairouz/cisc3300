@@ -1,0 +1,26 @@
+CISC 3300 S25 
+Homework 5 
+1. What is the DOM? What is meant by the DOM tree? 
+The dom, also known as the document object model, specifies how broswers should create a model of an html page. The dom tree is a model of a web page. As a browser loads a webpage, it creates a model of that page, that being the dom tree. It consists of 4 types of nodes. The document node, element node, attribute node & text node.
+
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+An XSS attack, also known as a cross site scripting attack, happens with an attacker placing malicous code into a site. XSS can give access to the dom, website cookies. This can let the attacker make unathorized purchases, post content & spread code further. XXS happens when adding to a page using innerHTML. You can prevent XXS attack by using libaries like Dom purify, utilizing textContent instead of innerHTML.
+
+ 3. What is an event in JavaScript? What kind of events can you respond to with code?
+When browsing the web, your browswer will register different types of events. It is a browser’s way of saying, “hey this happened.” Your script can respond to these events. The kind of events you can respond to with code are UI events, Keyboard events, Mouse events, focus events, form events, and mutation events
+
+
+ 4. How does a DOM eventListener work? What are the parameters it is expecting?    A dom event listener is a more recent approach to handling events. It works by attaching an event handler to an element, letting it listen for a certain event and execute a function when that event happens. It expects 3 parameters, the event type, a boolean or bubbling. 
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page? 
+jQuery is a javascript file that you include in your web pages. It lets you find elements using CSS-style selectors and then do something with the elements using jQuery methods. We use jQuery because it makes coding simpler. To load jQuery, we use the script tag and a link. 
+6. What is AJAX? JSON? The HTTP method types and what they do? 
+AJAX stands for Asycnhronus Javascript and XML. It allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. HTTP stands for hypertext transfer protocol. It is how the internet handles communication between clients and servers, is done by requests and responses. 
+
+7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check if it’s in the right format, making use of the “validate” button. 
+8. Create a webpage that contains an unordered list element which contains several list item elements. If a list item is clicked, change the color of it. Each list item should have a different color. 
+9. Create a webpage that contains a button. Write jQuery code so that when the button is clicked an HTTP GET request is sent to a PHP backend. From the PHP backend(reference the php-project code found here: 
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return a json encoded associative array of data pertaining to your fake business. Make sure that it has at least a name and a price. Use the response returned on the frontend to create a div element for each piece of data, show the name and price of each item and give the elements some style. 
+10. Create a webpage that contains a form element with some input elements. Write jQuery code so that when the form is submitted an HTTP POST request is sent to a PHP backend. From the PHP backend(reference the php-project code found here: 
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return an associative array with data for a success message that is JSON encoded. Use the response to create an HTML element that contains the message data, give it some proper styling.

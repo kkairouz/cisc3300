@@ -1,0 +1,20 @@
+
+{
+    "tour dates": [
+       {
+          "city": "Brooklyn,Ny",
+          "date": "March 23",
+          "ticketsAvailable": true
+       },
+       {
+          "city": "Chicago, Il",
+          "date": "April 6",
+          "ticketsAvailable": false
+       },
+       {
+          "city": "Chicago, Il",
+          "date": "April 6",
+          "ticketsAvailable": false
+       }
+    ]
+ }
