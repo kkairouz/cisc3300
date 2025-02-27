@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>problem 9 with Button</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <style>
-        .clicker 
+<title>Problem 9 with Button</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+        .clicker
         {
             width: 200px;
             height: 70px;
@@ -15,41 +15,70 @@
             align-items: center;
             cursor: pointer;
             font-size: 20px;
+            border: none;
+            border-radius: 8px;
         }
-        #cars-container
+
+        #items-container 
         {
             margin-top: 20px;
         }
-        .user 
+
+        .item 
         {
-            padding: 10px;
-            margin: 5px;
+            padding: 20px;
+            margin: 10px;
             background: lightgray;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 18px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
         }
-    </style>
+
+        .name 
+        {
+            font-weight: bold;
+        }
+
+        .price 
+        {
+            color: limegreen;
+        }
+</style>
 </head>
 <body>
 
-    <button id="ajax-get" class="clicker">Get items!</button>
-    <div id="cars-container"></div>
+    <button id="ajax-get" class="clicker">Get Items!</button>
+    <div id="items-container"></div>
 
     <script>
-        $('#ajax-get').on('click', function () {
-            $.ajax
-            ({
-                url: 'http://localhost:8888/problem', 
+        $('#ajax-get').on('click', function () 
+        {
+            $.ajax(
+                {
+                url: 'http://localhost:8888/problem.php',
                 type: "GET",
                 dataType: "json",
                 success: function (data) 
                 {
                     console.log(data);
-                    $('#cars-container').empty(); 
+                    $('#items-container').empty(); 
+                    
                     $.each(data, function (key, value) {
-                        $('#cars-container').append(`<div class="user">${value['name']}</div>`);
+                        $('#items-container').append
+                        (
+                            `<div class="item">
+                                <span class="name">${value.name}</span>
+                                <span class="price">${value.price}</span>
+                            </div>`
+                        );
                     });
                 },
+                error: function () {
+                    alert("Error fetching data!");
+                }
             });
         });
     </script>

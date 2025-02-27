@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Homework 5 Problem 10</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <div id="message-data" class="mt-5"></div>
 <div class="mt-5">
     <form id="form-id">
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit Here</button>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 
@@ -27,34 +28,36 @@
     margin: 5px;
 }
 </style>
+
 <script>
-     $('#form-id').on('submit', function (e) 
-     {
+    $('#form-id').on('submit', function (e) 
+    {
         e.preventDefault();
-        const emailInput = $('#exampleInputEmail1');
-        const passwordInput = $('#exampleInputPassword1');
-        const data = {
-            email: emailInput.val(),
-            password: passwordInput.val(),
-        }
-        $.ajax(
-        {
-            url: 'http://localhost:8888',
+        const emailInput = $('#exampleInputEmail1').val();
+        const passwordInput = $('#exampleInputPassword1').val();
+        const data = { email: emailInput, password: passwordInput };
+
+        $.ajax({
+            url: 'http://localhost:8888/problem10.php', 
             type: "POST",
-            data: data,
+            data: JSON.stringify(data),
+            contentType: "application/json",
             dataType: "json",
-            success: function (data) {
-                console.log(data);
+            success: function (response) 
+            {
+                console.log(response);
                 $("#message-data").html(`
-                                <div class="theData">${data.message}</div>
-                            `);
+                    <div class="theData">${response.message}</div>
+                    <div class="theData">Email: ${response.received_email}</div>
+                    <div class="theData">Password: ${response.received_password}</div>
+                `);
             },
             error: function (error) 
             {
-                console.log(error)
+                console.log("Error:", error);
+                $("#message-data").html(`<div class="theData text-danger">Something went wrong!</div>`);
             }
         });
-
     });
 </script>
 </body>
