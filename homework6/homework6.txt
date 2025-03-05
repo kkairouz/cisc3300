@@ -1,0 +1,23 @@
+CISC 3300 S25 
+Homework 6 
+1. Define hoisting and closures in JS. 
+Hoisting is variables and functions within each execution context are created before they are executed.Closers are the ability of a function to remember the variables and functions that are declared in its outer scope.
+
+2. What is PHP? What do server side languages do in web development? 
+Php stands for hypertext preprocessor. It's used on a majority of websites. Server Side languages process user input and interact with other servers
+3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
+They both are dynamic and weakly typed. However PHP does Refrence counting with garbage collection, while JavaScript has an automatic garbage collection. When a variable's reference count drops to zero, its memory is freed. For java script, its garbage collector automatically reclaims memory from objects that are no longer in use. 
+4. Why pick PHP over another server side scripting language like Python or Node? 
+Because PHP is more straightforward and arguably easier when it comes to syntax. However PHP might not be as efficient when it comes to performance
+
+5. Compare and contrast echo and var_dump. 
+Echo command is a way to output text. It is for one or more expressions. Var dump dumps information about one or more variables. The information holds type and value of the variables- can print out primitive values
+6. Create a new PHP project, in the index.php file create: 
+a. An associative array with keys and values. 
+b. Loop through the array and echo out a string that contains each key and value. 7. Add to question 6: 
+a. Create a function that has: 
+i. a set return type 
+ii. an optional parameter 
+iii. a typed parameter 
+iv. and call your function with values that have the correct data types
+ 8. Create another PHP project that includes a “resources” directory. In the resources directory create an HTML file that has elements to show an image, also place an image in the resources directory. When the domain is accessed in a browser(localhost), return the HTML page with the working image.
