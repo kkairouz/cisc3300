@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/NoteModel.php';
+
 class NoteController 
 {
     private $noteModel;
@@ -11,6 +12,10 @@ class NoteController
 
     public function createNote() 
     {
+        // Ensure the response is always JSON
+        header('Content-Type: application/json');
+        ob_clean(); // Clears any unwanted output
+
         $response = ["status" => "error", "message" => "Invalid request"];
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -37,8 +42,11 @@ class NoteController
         }
 
         echo json_encode($response);
+        exit; // Stop execution after outputting JSON
     }
 }
+
+// Create controller instance and process request
 $controller = new NoteController();
 $controller->createNote();
 ?>
