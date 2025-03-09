@@ -72,7 +72,7 @@ p
             e.preventDefault();
             const formData = new FormData(this);
 
-            fetch("NoteController.php", 
+            fetch("http://localhost:8888/index.php",
             {
                 method: "POST",
                 body: formData
