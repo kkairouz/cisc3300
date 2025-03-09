@@ -1,11 +1,4 @@
+
 <?php
+require 'resources/image.html';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>This is an image problem 8</title>
-</head>
-<body>    
-    <img src="resources/image.jpeg" style="max-width: 100%; height: auto;">
-</body>
-</html>
