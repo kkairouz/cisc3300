@@ -1,22 +1,26 @@
 <?php
-require_once __DIR__ . '/../models/NoteModel.php';
+//require_once __DIR__ . '/../models/NoteModel.php';
+namespace app\controllers;
 
 class NoteController 
 {
     private $noteModel;
 
-    public function __construct() 
-    {
-        $this->noteModel = new NoteModel();
-    }
+    // public function __construct() 
+    // {
+    //     $this->noteModel = new NoteModel();
+    // }
 
     public function createNote() 
     {
         // Ensure the response is always JSON
-        header('Content-Type: application/json');
-        ob_clean(); // Clears any unwanted output
+        // header('Content-Type: application/json');
+        // ob_clean(); // Clears any unwanted output
 
-        $response = ["status" => "error", "message" => "Invalid request"];
+        $response = [
+            "status" => "error", 
+            "message" => "Invalid request"
+        ];
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $title = htmlspecialchars(trim($_POST["title"] ?? ""));
@@ -47,6 +51,6 @@ class NoteController
 }
 
 // Create controller instance and process request
-$controller = new NoteController();
-$controller->createNote();
+// $controller = new NoteController();
+// $controller->createNote();
 ?>
