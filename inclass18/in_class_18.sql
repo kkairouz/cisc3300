@@ -20,12 +20,14 @@ CREATE TABLE `userComments`
 );
 insert into users(id, firstName, addressID)
 values(3232004, 'Caleb', 12328),
-(12212003, 'Sasha', 20834);
+(12212003, 'Sasha', 20834),
+(9999999, 'Liam', 50505);
+
 
 insert into userComments
 values(23456, "4204 drive lane", "New Jersey", 3232004), 
-(39485, "345 Dean Street", "New York", 12212003); 
-
+(39485, "345 Dean Street", "New York", 12212003),
+(30405, NULL, "Oregon", 9999999);
 select  u.*, c.*
 from users u
 left join userComments c on u.id = c.studentID;
