@@ -11,7 +11,7 @@ CREATE TABLE `users`
 CREATE TABLE `userComments`
 (
     `id`        int(11) NOT NULL AUTO_INCREMENT,
-    `address`   varchar(254) NOT NULL,
+    `address`   varchar(254), 
     `state`     varchar(80),
     `studentID` int(11) NOT NULL,
     primary key (`id`),
