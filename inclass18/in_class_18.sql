@@ -16,7 +16,6 @@ CREATE TABLE `userComments`
     `studentID` int(11) NOT NULL,
     primary key (`id`),
     foreign key (studentID) references users(id)
-
 );
 insert into users(id, firstName, addressID)
 values(3232004, 'Caleb', 12328),
@@ -24,7 +23,7 @@ values(3232004, 'Caleb', 12328),
 (9999999, 'Liam', 50505);
 
 
-insert into userComments
+insert into userComments(id, address, state, studentID)
 values(23456, "4204 drive lane", "New Jersey", 3232004), 
 (39485, "345 Dean Street", "New York", 12212003),
 (30405, NULL, "Oregon", 9999999);
