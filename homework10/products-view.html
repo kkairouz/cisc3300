@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="products-view.css">
+</head>
+<body>
+
+    <br>
+    <h2>Product Name Search</h2>
+    <br>
+    <div class="row">
+        <div class="input-group mb-3">
+            <input id="search-text" type="text" class="form-control" placeholder="search for a product" aria-label="Recipient's product" aria-describedby="button-addon2">
+            <button id="search-button" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+        </div>
+    </div>
+    <div class="row">
+        <div id="search-products-container"></div>
+    </div>
+
+<div class="container products-form margin-thirty">
+    <h2>Products</h2>
+    <div id="products-container" class="margin-ten"></div>
+    <form action="/new-product" method="get">
+        <button type="submit" class="btn btn-success margin-thirty">Add Product</button>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: `http://localhost:8888/api/products`,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                $('#products-container').html('')
+                $.each(data, function (key, value) {
+                    $('#products-container').append(`
+                                <div class="product-container margin-thirty">
+                                    <span class="product">${value['name']} ${value['description']}</span>
+                                    <span>
+                                    <form action="products/${value['id']}" method="get">
+                                    <button type="submit" class="edit-button">Edit</button>
+                                    </form>
+
+                                    <form action="delete-product/${value['id']}" method="get" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                                    <button type="submit" class="delete-button">Delete</button>
+                                    </form>
+                                    </span>
+                                </div>`)
+                });
+            }
+        });
+
+        $(document).ready(function () {
+            $("#search-button").click(function () {
+                const url = $('#search-text').val() ? `http://localhost:8888/api/products?name=${$('#search-text').val()}` : `http://localhost:8888/api/products`;
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#search-products-container').html('');
+
+                        if (data.error) {
+                            $('#search-products-container').html('<p>' + data.error + '</p>');
+                        } else if (data.length) {
+                            $.each(data, function (key, value) {
+                                $('#search-products-container').append(`
+                                <div>
+                                   <br>
+                                   <a href="/products/${value['id']}">${value['name']}</a>
+                                </div>
+                            `);
+                            });
+                        } else {
+                            $('#search-products-container').html('<br> <p>No products found matching your search.</p>');
+                        }
+                    },
+                });
+            });
+        });
+
+    })
+
+
+
+
+</script>
+
+</body>
+</html>
